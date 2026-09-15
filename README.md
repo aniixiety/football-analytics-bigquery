@@ -59,6 +59,8 @@ Built a two page dashboard connected live to BigQuery:
 
 Average valuation was used instead of total valuation, since total is skewed by how many historical valuation records a club happens to have, rather than reflecting real player value.
 
+The actual dashboard file is `Football_Analytics_Dashboard.pbix` in this repo. It needs Power BI Desktop to open and to reconnect to the live BigQuery data. For a quick look without opening Power BI, check the `dashboard_screenshots/` folder for PNGs of both pages.
+
 ## Stage 5: Match Outcome Prediction
 
 Built a machine learning model to predict match outcomes (`home_win`, `away_win`, `draw`) using historical club valuation, historical win rate, and recent form (points from each club's last 5 matches).
@@ -132,6 +134,8 @@ A natural language chatbot that answers questions about the football database, b
 
 ## Files in This Project
 
+- `Football_Analytics_Dashboard.pbix`: the Power BI dashboard from Stage 4, connects live to BigQuery, needs Power BI Desktop to open
+- `dashboard_screenshots/`: PNG exports of both dashboard pages, for anyone browsing the repo without Power BI installed
 - `stage5_match_prediction.ipynb`: full notebook for the machine learning stage, including all model comparisons
 - `ask_football.py`: core chatbot logic (schema reading, SQL generation, safety checks, query execution, answer generation)
 - `app.py`: Streamlit web interface, imports its logic from `ask_football.py`
